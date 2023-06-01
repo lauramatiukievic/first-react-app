@@ -1,0 +1,11 @@
+.title-contact {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  max-width: 50%;
+}
+.title {
+  display: flex;
+  padding-top: 20px;
+  font-size: 14px;
+}

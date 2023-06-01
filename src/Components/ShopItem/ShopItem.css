@@ -1,0 +1,38 @@
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+
+  gap: 10px;
+}
+.container-1 {
+  display: flex;
+  flex-wrap: wrap;
+  border: none;
+  flex-direction: row;
+  box-shadow: 1px 1px 1px 1px rgb(186, 179, 179);
+  padding: 15px;
+
+  padding-right: 65px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+
+  line-height: 25px;
+  padding: 0px;
+  font-weight: 700;
+}
+
+.shop {
+  display: flex;
+  flex-wrap: wrap;
+  height: fit-content;
+  margin-bottom: 0px;
+}
