@@ -1,7 +1,7 @@
 // import "./App.css";
 
-import ShopList from "../../Components/ShopList/ShopList";
-import Map from "../../Components/Map/Map";
+import ShopList from "../../Components/ComponentContactUs/ShopList/ShopList";
+import Map from "../../Components/ComponentContactUs/Map/Map";
 import "./contact.us.css";
 
 function ContactUs() {
