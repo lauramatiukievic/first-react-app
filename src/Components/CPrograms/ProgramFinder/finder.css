@@ -67,3 +67,22 @@ select {
 label {
   padding-left: 5px;
 }
+@media screen and (max-width: 800px) {
+  .finder {
+    align-items: center;
+    margin-left: auto;
+    margin-bottom: auto;
+  }
+  .main-menu a {
+    display: none;
+  }
+
+  .button-1 {
+    display: none;
+  }
+  .menu-button-header {
+    display: inline-flex;
+    background-color: white;
+    border: none;
+  }
+}

@@ -1,0 +1,23 @@
+.banner-foto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left;
+}
+h1 {
+  font-size: 75px;
+  font-weight: 600;
+  margin-top: 80px;
+  margin-bottom: 20px;
+}
+.banner {
+  background-color: white;
+  background-image: url(https://codeacademylt.sharepoint.com/sites/Front-endFEU7/Shared%20Documents/General/banner.jpg);
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: 70% 100%;
+}
+h2 {
+  margin: 0;
+  grid-template-rows: 1fr;
+}

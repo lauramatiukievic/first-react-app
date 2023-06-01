@@ -1,0 +1,48 @@
+.finder {
+  height: 520px;
+  background-color: white;
+  /* display: grid;
+      grid-template-columns: 1fr; */
+  padding: 40px;
+  position: sticky;
+  top: 20px;
+}
+
+@media screen and (max-width: 1100px) {
+  .all-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .finder {
+    padding: 30px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  h2 {
+    font-size: 24px;
+    padding-bottom: 10px;
+  }
+}
+@media screen and (max-width: 680px) {
+  h2 {
+    font-size: 20px;
+    padding-bottom: 10px;
+  }
+
+  .finder {
+    padding: 18px;
+  }
+}
+@media screen and (max-width: 550px) {
+  h2 {
+    font-size: 20px;
+    padding-bottom: 10px;
+  }
+
+  .finder {
+    padding: 18px;
+  }
+}
