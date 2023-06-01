@@ -1,3 +1,5 @@
+import "./HeaderItem.css";
+
 function HeaderItem() {
   return (
     <div className="container">

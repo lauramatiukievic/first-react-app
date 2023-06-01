@@ -1,6 +1,8 @@
 import svg from "../../../images/download.svg";
 import svgMoon from "../../../images/moon.svg";
 
+import "./programItem.css";
+
 function ProgramItem(props) {
   return (
     <div className="programs col">

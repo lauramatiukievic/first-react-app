@@ -1,3 +1,4 @@
+import "./finder.css";
 function Finder() {
   return (
     <div className="col-4 row">
