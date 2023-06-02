@@ -1,6 +1,7 @@
 import BannerLogo from "./BannerLogo";
 import "./Banner.css";
 import BannerFoto from "../../../images/Desktop_banner-1024x70.jpg";
+
 function Banner() {
   return (
     <div className="col-12">

@@ -1,5 +1,6 @@
 import "./HeaderItem.css";
 import Hamburger from "../../../images/4572821-200.png";
+import { NavLink } from "react-router-dom";
 
 function HeaderItem() {
   return (
@@ -12,28 +13,44 @@ function HeaderItem() {
           <nav className="main-navigation">
             <ul className="main-menu">
               <li className="menu-item">
-                <a href="#">Studentams</a>
+                <NavLink to="/studentams" className="menu-item">
+                  Studentams
+                </NavLink>
               </li>
               <li className="menu-item">
-                <a href="#">Verslui</a>
+                <NavLink to="/verslui" className="menu-item">
+                  Verslui
+                </NavLink>
               </li>
               <li className="menu-item">
-                <a href="#">Programos</a>
+                <NavLink to="/programs" className="menu-item">
+                  Programos
+                </NavLink>
               </li>
               <li className="menu-item">
-                <a href="#">Apie mus</a>
+                <NavLink to="/apiemus" className="menu-item">
+                  Apie Mus
+                </NavLink>
               </li>
               <li className="menu-item">
-                <a href="#">Naujienos</a>
+                <NavLink to="/naujienos" className="menu-item">
+                  Naujienos
+                </NavLink>
               </li>
               <li className="menu-item">
-                <a href="#">IT testas</a>
+                <NavLink to="/ittestas" className="menu-item">
+                  IT testas
+                </NavLink>
               </li>
               <li className="menu-item">
-                <a href="#">Kontaktai</a>
+                <NavLink to="/kontaktai" className="menu-item">
+                  Kontaktai
+                </NavLink>
               </li>
               <li className="menu-item">
-                <a href="#">EN</a>
+                <NavLink to="/en" className="menu-item">
+                  En
+                </NavLink>
               </li>
             </ul>
             <a className="button-1" href="tel:+370545431231">

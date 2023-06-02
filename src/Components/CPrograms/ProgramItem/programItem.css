@@ -12,22 +12,25 @@
 
 .programs {
   background-color: white;
+  position: relative;
 }
 .right-icon {
   background-color: rgb(255, 0, 233);
   color: white;
-  padding: 10px;
+  padding: 12px 17px 11px;
 
   text-align: center;
   border-radius: 20px;
-  font-size: 13px;
-  margin-right: -55px;
-}
+  font-size: 10px;
+  letter-spacing: 1px;
+  line-height: 1.11;
 
-.right-pink {
-  display: flex;
-  justify-content: end;
-  margin-left: 20px;
+  text-transform: uppercase;
+  width: fit-content;
+  display: inline-block;
+  position: absolute;
+  right: -10px;
+  top: 15px;
 }
 
 .program-icon {
@@ -38,25 +41,23 @@
   width: 100%;
 }
 .icons-container {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
   margin-top: auto;
 }
 
 .icons {
-  width: 130px;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   flex-direction: row;
   align-items: center;
+  padding-bottom: 20px;
 }
 
-h4 {
+span {
   font-size: 12px;
   padding-left: 10px;
   font-weight: 600;
-  width: 100px;
+
+  text-transform: uppercase;
   margin: 0px;
 }
 .mini-icons {
@@ -66,7 +67,18 @@ h4 {
   margin: 0px;
   align-items: center;
 }
+
+.mini-icon {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin: 0px;
+  align-items: center;
+}
 .about {
   font-size: 16px;
   line-height: 25px;
+}
+.mini-icons-logo {
+  width: 10px;
 }

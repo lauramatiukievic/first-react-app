@@ -4,28 +4,32 @@ import svgMoon from "../../../images/moon.svg";
 import "./programItem.css";
 
 function ProgramItem(props) {
+  let { icontitle, srclogo, title, p, level, time } = props.data;
+  if (!srclogo || !title || !p || !level || !time) {
+    return;
+  }
+
   return (
     <div className="programs col">
-      <div className="right-pink">
-        <div className="right-icon">{props.icontitle}</div>
-      </div>
+      {icontitle && <div className="right-icon">{icontitle}</div>}
+
       <div className="program-icon">
-        <img alt="logo" className="icon" src={props.srclogo} />
+        <img alt="logo" className="icon" src={srclogo} />
       </div>
-      <h2>{props.title}</h2>
-      <p className="about">{props.p}</p>
+      <h2>{title}</h2>
+      <p className="about">{p}</p>
       <div className="icons-container">
         <div className="icons">
           <div className="mini-icon">
-            <img alt="" src={svg} />
-            <h4>1 LYGIS</h4>
+            <img className="mini-icon-logo" alt="" src={svg} />
           </div>
+          <span>{level}</span>
         </div>
         <div className="icons">
           <div className="mini-icons">
-            <img alt="" src={svgMoon} />
+            <img className="mini-icons-logo" alt="" src={svgMoon} />
           </div>
-          <h4>VAKARAIS</h4>
+          <span>{time}</span>
         </div>
       </div>
     </div>
