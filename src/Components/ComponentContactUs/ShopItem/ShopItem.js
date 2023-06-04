@@ -1,7 +1,8 @@
 import "./ShopItem.css";
+import Card from "../Card/card";
 function ShopItem(props) {
   return (
-    <div className="container-1">
+    <Card>
       <h2 className="shop">{props.title}</h2>
       <ul className="contact">
         <li className="shop-contact">
@@ -15,7 +16,7 @@ function ShopItem(props) {
           <a href={`addres:${props.address}`}>{props.address}</a>
         </li>
       </ul>
-    </div>
+    </Card>
   );
 }
 

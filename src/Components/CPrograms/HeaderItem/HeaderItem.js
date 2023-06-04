@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 function HeaderItem() {
   return (
     <div className="main-header col-12 text-center">
-      <div className="container">
+      <div className="header-container">
         <div className="main-header-wrapper">
           <div className="logo-wrapper">
             <img alt="" src="https://codeacademy.lt/wp-content/themes/codeacademy/dist/images/codeacademy-black.svg" />

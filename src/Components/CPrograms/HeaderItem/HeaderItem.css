@@ -1,10 +1,11 @@
-.container {
+.header-container {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 30px;
   padding-right: 30px;
 }
+
 .main-header-wrapper {
   display: flex;
   justify-content: space-between;

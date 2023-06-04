@@ -1,11 +1,11 @@
 import "./finder.css";
 
-function Finder() {
+function Finder(props) {
   return (
     <div className="col-4 row">
       <div className="row">
         <div className="finder col-12">
-          <h2>Rastos {} programos</h2>
+          <h2>Rastos {props.programCount} programos</h2>
           <div className="choose">
             <h3>Tema</h3>
             <div className="all-selector">

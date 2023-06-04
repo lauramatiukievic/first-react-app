@@ -1,0 +1,15 @@
+.programCard {
+  background-color: white;
+  /* display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+      padding: 40px; */
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 40px;
+}
+.programCard {
+  background-color: white;
+  position: relative;
+}
