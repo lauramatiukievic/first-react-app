@@ -1,0 +1,27 @@
+.press {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 100px;
+}
+
+.press-logo-hidden {
+  display: none;
+}
+
+@media screen and (max-width: 428px) {
+  .press :nth-child(1),
+  .press :nth-child(5) {
+    display: none;
+  }
+  .press :nth-child(2) {
+    display: inline;
+  }
+  .press {
+    gap: 15px;
+  }
+  .press-logo {
+    width: 35%;
+  }
+}

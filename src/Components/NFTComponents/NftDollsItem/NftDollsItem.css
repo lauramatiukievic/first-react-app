@@ -1,0 +1,80 @@
+.about-doll {
+  /* width: 22%; */
+  background-color: #eeeeee;
+  border-radius: 16px;
+}
+
+.doll {
+  width: 100%;
+}
+
+.rectangle {
+  width: 100%;
+}
+
+.showcase-name {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 48px;
+  margin: 0;
+}
+
+.doll-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.doll-info-about {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.money-logo {
+  display: flex;
+}
+
+.orange-text {
+  font-size: 12px;
+  line-height: 12px;
+  text-transform: uppercase;
+  color: #ff8139;
+}
+
+.position {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 12px;
+  text-transform: uppercase;
+  color: #777777;
+}
+
+.doll-number,
+.day {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  color: #777777;
+}
+
+.doll-title,
+.money {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20p;
+  text-align: right;
+  color: #111111;
+  margin: 0px;
+}
+
+.money {
+  margin-left: 5px;
+}
+
+@media screen and (max-width: 428px) {
+  .nft-dolls {
+    margin-right: -950px;
+  }
+}

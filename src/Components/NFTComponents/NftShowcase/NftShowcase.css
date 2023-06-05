@@ -1,0 +1,32 @@
+.showcase {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  gap: 30px;
+}
+
+.about-showcase {
+  margin: 0;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: #555555;
+}
+
+.about-showcase-underline {
+  border-bottom: 1px solid #555555;
+}
+.nft-dolls {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 20px;
+  /* display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 100px; */
+}

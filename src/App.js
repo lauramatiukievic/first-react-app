@@ -1,37 +1,16 @@
-import { Routes, Route, Link, NavLink } from "react-router-dom";
+import { Routes, Route, Link } from "react-router-dom";
 import Programs from "./Pages/Programs/programos";
 import DemoPage from "./Pages/DemoPage/DemoPage";
 import ContactUs from "./Pages/ContactUs/ContactUs";
 import Container from "./Components/Container/container";
+import NftPage from "./Pages/NFTPage/NftPage";
+import Navigation from "./Components/Navigation/navigation";
 
 function App() {
   return (
     <div className="App">
       <Container classes="custom-container">
-        <nav className="main-navigaition">
-          <ul>
-            <li className="nav-list">
-              <NavLink to="/" className="nav-link">
-                Home
-              </NavLink>
-            </li>
-            <li className="nav-list">
-              <NavLink to="/demo" className="nav-link">
-                DemoPage
-              </NavLink>
-            </li>
-            <li className="nav-list">
-              <NavLink to="/contact-us" className="nav-link">
-                ContactUs
-              </NavLink>
-            </li>
-            <li className="nav-list">
-              <NavLink to="/programs" className="nav-link">
-                Programs
-              </NavLink>
-            </li>
-          </ul>
-        </nav>
+        <Navigation />
       </Container>
 
       <Routes>
@@ -39,6 +18,7 @@ function App() {
         <Route path="/demo" element={<DemoPage />} />
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/programs" element={<Programs />} />
+        <Route path="/nft" element={<NftPage />} />
         <Route path="/studentams" element={<h1>Students Page</h1>} />
         <Route path="/verslui" element={<h1>Verslui Page</h1>} />
         <Route path="/programs" element={<h1>Programos Page</h1>} />

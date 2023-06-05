@@ -1,0 +1,97 @@
+.hero-section {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.hero-text {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.her-graphic {
+  width: 50%;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.nft-monster {
+  width: 100%;
+}
+
+.info {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #ff3998;
+}
+
+.hero-name {
+  font-style: normal;
+  font-weight: 900;
+  font-size: 96px;
+  line-height: 116px;
+  margin: 0px;
+  color: #111111;
+}
+
+.about-hero {
+  width: 90%;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  color: #555555;
+}
+
+.header-button {
+  width: 30%;
+  padding: 15px 10px;
+  border-radius: 50px;
+  border: 2px solid red;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 150%;
+}
+
+@media screen and (max-width: 428px) {
+  .hero-name {
+    width: 70%;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 58px;
+    color: #111111;
+  }
+  .about-hero {
+    width: 70%;
+  }
+  .hero-text {
+    width: 100%;
+  }
+  .header-button {
+    width: 50%;
+  }
+  .hero-section {
+    position: relative;
+  }
+  .her-graphic {
+    position: absolute;
+    top: -10px;
+    right: -150px;
+    overflow-x: hidden;
+  }
+  .nft-monster {
+    width: 50%;
+  }
+}

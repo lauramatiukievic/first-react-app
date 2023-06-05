@@ -1,0 +1,51 @@
+.header-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.right-header,
+.logo-container {
+  width: 50%;
+}
+.right-header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header-category {
+  display: flex;
+  gap: 28px;
+  list-style-type: none;
+}
+
+.gray-title,
+.purple-title {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+}
+.gray-title {
+  color: #555555;
+}
+.purple-title {
+  color: #ff3998;
+}
+
+.header-hamburger {
+  display: none;
+}
+
+@media screen and (max-width: 428px) {
+  .right-header {
+    display: none;
+  }
+  .header-hamburger {
+    display: inline-block;
+  }
+}

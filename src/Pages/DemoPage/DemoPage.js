@@ -1,4 +1,4 @@
-import logo from "../../images/logo.svg";
+import logo from "../../images/logo192.png";
 import "./App.css";
 function DemoPage() {
   return (
