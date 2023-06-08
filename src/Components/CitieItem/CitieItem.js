@@ -47,8 +47,8 @@ function CitiesItem(props) {
       <p>{getAboutCapital()}</p>
       <h3 className="attractionsTitle"> {getPlaces()}</h3>
       <ul className="popularPlace">{touristPlace()}</ul>
-      <button onClick={() => props.deleteCity(props.index)}> Delete City</button>
-      <button> Edit City</button>
+      <button onClick={() => props.onDeleteCity(props.index)}> Delete City</button>
+      <button onClick={() => props.onEditCity(props.index)}> Edit City</button>
     </div>
   );
 }

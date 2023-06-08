@@ -100,6 +100,8 @@ function CitiesPage() {
   ];
 
   const [items, setItems] = useState(cities);
+  const [showSaveButton, setShowSaveButton] = useState(false);
+  const [currentCityIndex, setCurrentCityIndex] = useState();
 
   const [name, setName] = useState("");
   const [population, setPopulation] = useState("");
@@ -110,7 +112,7 @@ function CitiesPage() {
 
   let cityItemAdd = (event) => {
     event.preventDefault();
-    const attractionList = attractions.split(",");
+    const attractionList = getAttractions();
     debugger;
     const newCity = { name: name, population: Number(population), location: { continent: continent, country: country }, attractions: attractionList, isCapital: isCapital };
     const newItems = [...items, newCity];
@@ -121,6 +123,11 @@ function CitiesPage() {
     setCountry("");
     setAttractions("");
     setIsCapital(false);
+  };
+
+  let getAttractions = () => {
+    debugger;
+    return attractions.split(",");
   };
 
   let cityNameChange = (event) => {
@@ -143,8 +150,41 @@ function CitiesPage() {
     setIsCapital(event.target.value);
   };
 
-  const deleteCity = (index) => {
+  const deleteCityHandler = (index) => {
     setItems((prevState) => deleteItemFromArrayByIndex(prevState, index));
+  };
+
+  const setCityData = (index) => {
+    setShowSaveButton(true);
+    setCurrentCityIndex(index);
+    const city = items[index];
+    setName(city.name);
+    setPopulation(city.population);
+    setContinent(city.location.continent);
+    setCountry(city.location.country);
+    setAttractions(city.attractions.join(","));
+    setIsCapital(city.isCapital);
+  };
+
+  const editCityHandler = (index) => {
+    setItems((prevState) => {
+      setShowSaveButton(false);
+      const beforeUpdate = prevState.slice(0, index);
+      const updatedCity = {
+        name: name,
+        population: population,
+        location: {
+          continent: continent,
+          country: country,
+        },
+        attractions: getAttractions(),
+        isCapital: isCapital,
+      };
+      beforeUpdate.push(updatedCity);
+      const afterUpdate = prevState.slice(index - 1);
+      const updatedCities = beforeUpdate.concat(afterUpdate);
+      return updatedCities;
+    });
   };
 
   const getClassName = (index) => {
@@ -156,7 +196,7 @@ function CitiesPage() {
       return "smallCityItem";
     }
   };
-  const cityItems = items.map((city, index) => <CitiesItem className={getClassName(index)} key={index} data={city} deleteCity={deleteCity} index={index} />);
+  const cityItems = items.map((city, index) => <CitiesItem className={getClassName(index)} key={index} data={city} onDeleteCity={deleteCityHandler} index={index} onEditCity={setCityData} />);
 
   return (
     <Container>
@@ -183,11 +223,14 @@ function CitiesPage() {
         </div>
         <div>
           <label htmlFor="capital">Capital</label>
-          <input type="checkbox" value={isCapital} id="capital" onChange={isCapitalChange} />
+          <input type="checkbox" value={isCapital} id="capital" onChange={isCapitalChange} checked={isCapital} />
         </div>
         <input type="submit" value="submit" />
+
+        {/* jei paspaustas edit mygtukas atvaizduojam */}
+        {showSaveButton && <button onClick={() => editCityHandler(currentCityIndex)}>Save</button>}
       </form>
-      <div className="cities-content">{cityItems}</div>
+      <div className="cities-content">{cityItems} </div>
     </Container>
   );
 }
