@@ -2,6 +2,10 @@ import "./NftDollsItem.css";
 
 function NftDollsItem(props) {
   let { showcaseLogo, text, position, dollTitle, moneyLogo, money, number, day } = props.data;
+
+  if (!showcaseLogo || !text || !number) {
+    return "";
+  }
   return (
     <div className="about-doll">
       <div className="doll">

@@ -1,0 +1,115 @@
+.footer-content {
+  margin-top: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.li-section {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-logo {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.nft-logo {
+  width: 20%;
+}
+
+.li-name {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+  color: #555555;
+}
+
+li {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: none;
+  padding-bottom: 10px;
+  color: #555555;
+}
+
+.footer-section {
+  list-style-type: none;
+}
+
+.social-media {
+  width: 15%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.bottom {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+  text-align: right;
+  color: #999999;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+@media screen and (max-width: 428px) {
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+    margin-top: 50px;
+  }
+  .nft-logo {
+    width: 60%;
+  }
+  .social-media {
+    width: 60%;
+  }
+  .li-section {
+    padding-top: 50px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 1fr 1fr;
+  }
+  .footer-logo {
+    width: 100%;
+  }
+  .footer-section {
+    padding: 0px;
+  }
+  .about-logo {
+    width: 100%;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    color: #555555;
+  }
+  .bottom {
+    padding-bottom: 100px;
+    padding-top: 0px;
+  }
+  .copyright-date {
+    display: none;
+  }
+}

@@ -1,0 +1,26 @@
+.capital {
+  color: blue;
+}
+
+.cities {
+  background-color: palevioletred;
+  padding: 20px;
+}
+
+.attraction {
+  text-transform: capitalize;
+  color: black;
+  font-size: 14px;
+}
+
+.attractionsTitle {
+  font-size: 18px;
+}
+
+.smallCityItem {
+  width: calc((100% - 20px) / 2);
+}
+
+.largeCityItem {
+  width: 100%;
+}

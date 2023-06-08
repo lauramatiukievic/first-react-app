@@ -5,6 +5,9 @@ import ContactUs from "./Pages/ContactUs/ContactUs";
 import Container from "./Components/Container/container";
 import NftPage from "./Pages/NFTPage/NftPage";
 import Navigation from "./Components/Navigation/navigation";
+import CaunterPage from "./Pages/CounterPage/Counter";
+import ShoppingPage from "./Pages/ShoppingPage/shoppingPage";
+import CitiesPage from "./Pages/CitiesPage/cities";
 
 function App() {
   return (
@@ -19,6 +22,9 @@ function App() {
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/programs" element={<Programs />} />
         <Route path="/nft" element={<NftPage />} />
+        <Route path="/counter" element={<CaunterPage />} />
+        <Route path="/shop" element={<ShoppingPage />} />
+        <Route path="/cities" element={<CitiesPage />} />
         <Route path="/studentams" element={<h1>Students Page</h1>} />
         <Route path="/verslui" element={<h1>Verslui Page</h1>} />
         <Route path="/programs" element={<h1>Programos Page</h1>} />

@@ -1,9 +1,10 @@
 import { NavLink } from "react-router-dom";
+import "./navigation.css";
 
 function Navigation() {
   return (
-    <nav className="main-navigaition">
-      <ul>
+    <nav className="main-navigation">
+      <ul className="link-list">
         <li className="nav-list">
           <NavLink to="/" className="nav-link">
             Home
@@ -27,6 +28,21 @@ function Navigation() {
         <li className="nav-list">
           <NavLink to="/nft" className="nav-link">
             Nft
+          </NavLink>
+        </li>
+        <li className="nav-list">
+          <NavLink to="/counter" className="nav-link">
+            Caunter Page
+          </NavLink>
+        </li>
+        <li className="nav-list">
+          <NavLink to="/shop" className="nav-link">
+            Shop Page
+          </NavLink>
+        </li>
+        <li className="nav-list">
+          <NavLink to="/cities" className="nav-link">
+            Cities Page
           </NavLink>
         </li>
       </ul>

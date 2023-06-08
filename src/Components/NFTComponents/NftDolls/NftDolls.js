@@ -17,9 +17,9 @@ const dolls = [
     number: "#12983",
     day: "1 Day Left",
   },
-  { showcaseLogo: showcaseDoll2, text: "Gloop series", position: "Top Bid", dollTitle: "Beige", moneyLogo: showcaseMoney1, money: "2.99 ETH", number: "#12983", day: "1 Day Left" },
-  { showcaseLogo: showcaseDoll3, text: "Gloop series", position: "Top Bid", dollTitle: "Red Man", moneyLogo: showcaseMoney1, money: "2.99 ETH", number: "#12983", day: "1 Day Left" },
-  { showcaseLogo: showcaseDoll4, text: "Gloop series", position: "Top Bid", dollTitle: "Green", moneyLogo: showcaseMoney1, money: "2.99 ETH", number: "#12983", day: "1 Day Left" },
+  { index: "", showcaseLogo: showcaseDoll2, text: "Gloop series", position: "Top Bid", dollTitle: "Beige", moneyLogo: showcaseMoney1, money: "2.99 ETH", number: "#12983", day: "1 Day Left" },
+  { index: "", showcaseLogo: showcaseDoll3, text: "Gloop series", position: "Top Bid", dollTitle: "Red Man", moneyLogo: showcaseMoney1, money: "2.99 ETH", number: "#12983", day: "1 Day Left" },
+  { index: "", showcaseLogo: showcaseDoll4, text: "Gloop series", position: "Top Bid", dollTitle: "Green", moneyLogo: showcaseMoney1, money: "2.99 ETH", number: "#12983", day: "1 Day Left" },
 ];
 
 function NftDolls() {
