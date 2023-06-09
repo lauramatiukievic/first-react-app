@@ -206,35 +206,50 @@ function CitiesPage() {
 
   return (
     <Container>
-      <form onSubmit={cityItemAdd}>
-        <div>
-          <label htmlFor="city-name">City</label>
-          <input type="text" value={name} id="city-name" placeholder="Write city:" onChange={cityNameChange} />
+      <form className="city-form" onSubmit={cityItemAdd}>
+        <div className="form-input">
+          <label className="input-title" htmlFor="city-name">
+            City
+          </label>
+          <input className="input-select-data" type="text" value={name} id="city-name" placeholder="Write city:" onChange={cityNameChange} />
         </div>
-        <div>
-          <label htmlFor="city-population">Population</label>
-          <input type="number" value={population} id="city-population" placeholder="Numbers" onChange={poplationChange} />
+        <div className="form-input">
+          <label className="input-title" htmlFor="city-population">
+            Population
+          </label>
+          <input className="input-select-data" step="1000" type="number" value={population} id="city-population" placeholder="Numbers" onChange={poplationChange} />
         </div>
-        <div>
-          <label htmlFor="city-continent">Continent</label>
-          <input type="text" value={continent} id="city-continent" placeholder="Witch Continent" onChange={continentChange} />
+        <div className="form-input">
+          <label className="input-title" htmlFor="city-continent">
+            Continent
+          </label>
+          <input className="input-select-data" type="text" value={continent} id="city-continent" placeholder="Witch Continent" onChange={continentChange} />
         </div>
-        <div>
-          <label htmlFor="city-country">Country</label>
-          <input type="text" value={country} id="city-country" placeholder="Write country here" onChange={countryChange} />
+        <div className="form-input">
+          <label className="input-title" htmlFor="city-country">
+            Country
+          </label>
+          <input className="input-select-data" type="text" value={country} id="city-country" placeholder="Write country here" onChange={countryChange} />
         </div>
-        <div>
-          <label htmlFor="city-attraction">Attraction</label>
-          <textarea type="text" value={attractions} id="city-attraction" placeholder="Add attraction here" onChange={attractionChange} />
+        <div className="form-input">
+          <label className="input-title" htmlFor="city-attraction">
+            Attraction
+          </label>
+          <textarea className="input-select-data" type="text" value={attractions} id="city-attraction" placeholder="Add attraction here" onChange={attractionChange} />
         </div>
-        <div>
-          <label htmlFor="capital">Capital</label>
-          <input type="checkbox" name="isCapital" value={isCapital} id="capital" onChange={isCapitalChange} checked={isCapital} />
+        <div className="form-input">
+          <label className="input-title" htmlFor="capital">
+            Capital
+          </label>
+          <input className="input-select-data" type="checkbox" name="isCapital" value={isCapital} id="capital" onChange={isCapitalChange} checked={isCapital} />
         </div>
-        <input type="submit" value="submit" />
+        <input className="submit-data" type="submit" value="submit" />
 
-        {/* jei paspaustas edit mygtukas atvaizduojam */}
-        {showSaveButton && <button onClick={() => editCityHandler(currentCityIndex)}>Save</button>}
+        {showSaveButton && (
+          <button className="save-data" onClick={() => editCityHandler(currentCityIndex)}>
+            Save
+          </button>
+        )}
       </form>
       <div className="cities-content">{cityItems} </div>
     </Container>

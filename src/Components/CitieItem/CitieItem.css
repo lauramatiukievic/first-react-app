@@ -1,10 +1,11 @@
 .capital {
-  color: blue;
+  color: aquamarine;
 }
 
 .cities {
   background-color: palevioletred;
   padding: 20px;
+  border: 1px solid black;
 }
 
 .attraction {
@@ -23,4 +24,22 @@
 
 .largeCityItem {
   width: 100%;
+}
+
+.delete-city,
+.edit-city {
+  border: 1px solid black;
+  box-shadow: 5px 5px 5px grey;
+  background-color: aquamarine;
+  text-transform: capitalize;
+  font-weight: 500;
+  border-radius: 20px;
+  width: 100px;
+  margin-left: 10px;
+}
+
+.delete-city:active,
+.edit-city:active {
+  box-shadow: none;
+  transform: translateY(4px);
 }

@@ -3,3 +3,39 @@
   flex-wrap: wrap;
   gap: 20px;
 }
+
+.city-form {
+  border: 1px solid black;
+  padding: 10px;
+  width: 40%;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  background-color: aquamarine;
+  margin-bottom: 20px;
+}
+
+.form-input {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.submit-data,
+.save-data {
+  border: 1px solid black;
+  box-shadow: 5px 5px 5px grey;
+  background-color: palevioletred;
+  text-transform: capitalize;
+  font-weight: 600;
+  border-radius: 20px;
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+.submit-data:active,
+.save-data:active {
+  box-shadow: none;
+  transform: translateY(4px);
+}
