@@ -117,6 +117,10 @@ function CitiesPage() {
     const newCity = { name: name, population: Number(population), location: { continent: continent, country: country }, attractions: attractionList, isCapital: isCapital };
     const newItems = [...items, newCity];
     setItems(newItems);
+    clearFields();
+  };
+
+  let clearFields = () => {
     setName("");
     setPopulation("");
     setContinent("");
@@ -126,7 +130,6 @@ function CitiesPage() {
   };
 
   let getAttractions = () => {
-    debugger;
     return attractions.split(",");
   };
 
@@ -147,7 +150,7 @@ function CitiesPage() {
     setAttractions(event.target.value);
   };
   let isCapitalChange = (event) => {
-    setIsCapital(event.target.value);
+    setIsCapital(event.target.checked);
   };
 
   const deleteCityHandler = (index) => {
@@ -181,10 +184,13 @@ function CitiesPage() {
         isCapital: isCapital,
       };
       beforeUpdate.push(updatedCity);
-      const afterUpdate = prevState.slice(index - 1);
+      const afterUpdate = prevState.slice(index + 1);
       const updatedCities = beforeUpdate.concat(afterUpdate);
+
       return updatedCities;
     });
+
+    clearFields();
   };
 
   const getClassName = (index) => {
@@ -223,7 +229,7 @@ function CitiesPage() {
         </div>
         <div>
           <label htmlFor="capital">Capital</label>
-          <input type="checkbox" value={isCapital} id="capital" onChange={isCapitalChange} checked={isCapital} />
+          <input type="checkbox" name="isCapital" value={isCapital} id="capital" onChange={isCapitalChange} checked={isCapital} />
         </div>
         <input type="submit" value="submit" />
 
