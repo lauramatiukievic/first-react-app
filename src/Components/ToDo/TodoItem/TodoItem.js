@@ -12,7 +12,6 @@ function ToDoItem(props) {
 
   const timeStart = new Date(time);
   const timeEnd = new Date(finishTaskTill);
-  // const hourDiff = (timeEnd - timeStart) / 1000 / 60 / 60;
   const hourDiff = new Date(timeEnd - timeStart) / 1000 / 60 / 60;
 
   return (
