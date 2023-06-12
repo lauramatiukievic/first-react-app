@@ -4,7 +4,7 @@ import Container from "../../Components/Container/container";
 import "./Counter.css";
 import GradeItem from "../../Components/GradeItem/gradeItem";
 
-import deleteItemFromArrayByIndex from "../../Functions/deleteItem";
+import deleteFunctions from "../../Functions/deleteItem";
 
 function CaunterPage() {
   const initialValue = 5;
@@ -46,7 +46,7 @@ function CaunterPage() {
     });
   };
   const deleteGrade = (index) => {
-    setGrades((prevState) => deleteItemFromArrayByIndex(prevState, index));
+    setGrades((prevState) => deleteFunctions.deleteItemFromArrayByIndex(prevState, index));
   };
 
   const editGrade = (index) => {

@@ -45,6 +45,11 @@ function Navigation() {
             Cities Page
           </NavLink>
         </li>
+        <li className="nav-list">
+          <NavLink to="/todo" className="nav-link">
+            To Do
+          </NavLink>
+        </li>
       </ul>
     </nav>
   );

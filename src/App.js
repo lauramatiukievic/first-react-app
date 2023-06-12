@@ -9,6 +9,8 @@ import CaunterPage from "./Pages/CounterPage/Counter";
 import ShoppingPage from "./Pages/ShoppingPage/shoppingPage";
 import CitiesPage from "./Pages/CitiesPage/cities";
 
+import ToDoPage from "./Pages/TO DO LIST/toDoPage.js";
+
 function App() {
   return (
     <div className="App">
@@ -25,6 +27,7 @@ function App() {
         <Route path="/counter" element={<CaunterPage />} />
         <Route path="/shop" element={<ShoppingPage />} />
         <Route path="/cities" element={<CitiesPage />} />
+        <Route path="/todo" element={<ToDoPage />} />
         <Route path="/studentams" element={<h1>Students Page</h1>} />
         <Route path="/verslui" element={<h1>Verslui Page</h1>} />
         <Route path="/programs" element={<h1>Programos Page</h1>} />

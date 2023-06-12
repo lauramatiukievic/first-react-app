@@ -3,7 +3,7 @@ import "./cities.css";
 import Container from "../../Components/Container/container";
 import { useState } from "react";
 
-import deleteItemFromArrayByIndex from "../../Functions/deleteItem";
+import deleteFunctions from "../../Functions/deleteItem";
 
 function CitiesPage() {
   const cities = [
@@ -154,7 +154,7 @@ function CitiesPage() {
   };
 
   const deleteCityHandler = (index) => {
-    setItems((prevState) => deleteItemFromArrayByIndex(prevState, index));
+    setItems((prevState) => deleteFunctions.deleteItemFromArrayByIndex(prevState, index));
   };
 
   const setCityData = (index) => {
