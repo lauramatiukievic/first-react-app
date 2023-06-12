@@ -13,7 +13,7 @@ function ToDoItem(props) {
   const timeStart = new Date(time);
   const timeEnd = new Date(finishTaskTill);
   // const hourDiff = (timeEnd - timeStart) / 1000 / 60 / 60;
-  const hourDiff = new Date(timeEnd - timeStart);
+  const hourDiff = new Date(timeEnd - timeStart) / 1000 / 60 / 60;
 
   return (
     <div className={classes}>
@@ -27,7 +27,7 @@ function ToDoItem(props) {
 
       <span>Finish until:{timeEnd.toLocaleString()}</span>
       <button onClick={() => props.onDelete(id)}>Delete</button>
-      <span>Hours left: {hourDiff.getUTCHours()}</span>
+      <span>Hours left: {hourDiff.toFixed(0)}</span>
     </div>
   );
 }
