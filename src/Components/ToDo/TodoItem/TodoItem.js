@@ -16,7 +16,7 @@ function ToDoItem(props) {
       <p>{description}</p>
       <div>
         <label htmlFor="is-done">Done:</label>
-        <input type="checkbox" id="is-done" onClick={props.onDone(id)}></input>
+        <input type="checkbox" id="is-done" checked={isDone}></input>
       </div>
 
       <span>Finish until:{timeEnd.toLocaleString()}</span>
