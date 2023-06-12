@@ -1,13 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import "./ToDoItem.css";
 
 function ToDoItem(props) {
-  const [isDone, setIsDone] = useState(false);
-
-  const addTaskDone = (event) => {
-    setIsDone(event.target.checked);
-  };
-  const { id, title, time, description, finishTaskTill } = props.item;
+  const { id, title, time, isDone, description, finishTaskTill } = props.item;
   let classes = isDone ? "done-task" : "";
 
   const timeStart = new Date(time);
@@ -21,7 +16,7 @@ function ToDoItem(props) {
       <p>{description}</p>
       <div>
         <label htmlFor="is-done">Done:</label>
-        <input type="checkbox" id="is-done" onChange={addTaskDone}></input>
+        <input type="checkbox" id="is-done" onClick={props.onDone(id)}></input>
       </div>
 
       <span>Finish until:{timeEnd.toLocaleString()}</span>

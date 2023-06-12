@@ -1,0 +1,8 @@
+.done-task {
+  background-color: red;
+  padding: 10px;
+}
+.isDone {
+  background-color: yellow;
+  padding: 10px;
+}

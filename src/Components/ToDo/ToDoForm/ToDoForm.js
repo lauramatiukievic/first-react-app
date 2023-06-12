@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
+import "./ToDoForm.css";
 
 function ToDoForm(props) {
   const [title, setTitle] = useState("");
@@ -9,6 +10,7 @@ function ToDoForm(props) {
   let addTitleHandle = (event) => {
     setTitle(event.target.value);
   };
+
   let addDescriptionHandle = (event) => {
     setDescription(event.target.value);
   };
@@ -21,9 +23,10 @@ function ToDoForm(props) {
     event.preventDefault();
     const time = new Date().toLocaleString();
     let id = uuidv4();
-    const newData = { id, title, time, description, finishTaskTill };
+    const newData = { id, title, time, isDone: false, description, finishTaskTill };
     setTitle("");
     setDescription("");
+
     setfinishTaskTill("");
     props.onNewTask(newData);
   };

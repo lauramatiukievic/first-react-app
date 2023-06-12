@@ -13,14 +13,29 @@ function ToDoPage() {
     setItems(newItems);
   };
 
+  let addDoneTask = (id) => {
+    //atfiltruoti pagal id itema is items masyvo
+    //ideti paupdatinta itema i items masyva
+
+    setItems((prevState) => {
+      debugger;
+      const item = prevState.filter((item) => item.id === id);
+      const index = prevState.indexOf(item);
+      //uzsetinti ant to itemo isDone true
+      item.isDone = true;
+
+      return deleteFunctions.insertUpdatedItemIntoArrayByIndex(prevState, index, item);
+    });
+  };
+
   let deleteTask = (id) => {
     const deleteItem = deleteFunctions.deleteItemFromArrayById(items, id);
     setItems(deleteItem);
   };
   return (
     <Container>
-      <ToDoForm onNewTask={taskItemAdd}></ToDoForm>
-      <TodoList items={items} onDelete={deleteTask}></TodoList>
+      <ToDoForm task onNewTask={taskItemAdd}></ToDoForm>
+      <TodoList onDone={addDoneTask} items={items} onDelete={deleteTask}></TodoList>
     </Container>
   );
 }
