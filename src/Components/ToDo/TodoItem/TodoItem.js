@@ -2,8 +2,9 @@ import React from "react";
 import "./ToDoItem.css";
 
 function ToDoItem(props) {
-  const { id, title, time, isDone, description, finishTaskTill } = props.item;
+  const { id, title, time, isDone, description, finishTaskTill, updateDate } = props.item;
   let classes = isDone ? "done-task" : "";
+  let updateTime = updateDate ? `(Edit time ${updateDate})` : "";
 
   const timeStart = new Date(time);
   const timeEnd = new Date(finishTaskTill);
@@ -11,7 +12,11 @@ function ToDoItem(props) {
 
   return (
     <div className={classes}>
-      <span>{time}</span>
+      <span>
+        {" "}
+        Task create:
+        {time} {updateTime}
+      </span>
       <h2>{title}</h2>
       <p>{description}</p>
       <div>

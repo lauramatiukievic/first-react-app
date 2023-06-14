@@ -14,13 +14,14 @@ function ToDoPage() {
     setItems(newItems);
   };
 
-  let editTask = (id, title, description, finishTaskTill) => {
+  let editTask = (id, title, description, finishTaskTill, updateDate) => {
     setItems((prevState) => {
       let item = prevState.filter((item) => item.id === id)[0];
       const index = prevState.indexOf(item);
       item.title = title;
       item.description = description;
       item.finishTaskTill = finishTaskTill;
+      item.updateDate = updateDate;
       return deleteFunctions.insertUpdatedItemIntoArrayByIndex(prevState, index, item);
     });
     setEditTodo(null);

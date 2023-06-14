@@ -16,6 +16,7 @@ export default function ToDoFormHook(props) {
         description: props.editData.description,
         finishTaskTill: props.editData.finishTaskTill,
         isDone: props.editData.done,
+        updateDate: new Date().toLocaleString(),
       };
       reset({ ...defaultValues });
     } else {
@@ -26,6 +27,7 @@ export default function ToDoFormHook(props) {
         description: "",
         finishTaskTill: "",
         isDone: false,
+        updateDate: null,
       };
       reset({ ...defaultValues });
     }
@@ -34,15 +36,16 @@ export default function ToDoFormHook(props) {
   const onSubmit = (data) => {
     if (!props.editData) {
       const time = new Date().toLocaleString();
-      const task = { id: data.id, time, title: data.title, description: data.description, finishTaskTill: data.finishTaskTill, isDone: data.isDone };
+      const task = { id: data.id, time, title: data.title, description: data.description, finishTaskTill: data.finishTaskTill, isDone: data.isDone, updateDate: data.updateDate };
       props.onCreate(task);
     } else {
       let id = data.id;
       let title = data.title;
       let description = data.description;
       let finishTaskTill = data.finishTaskTill;
+      let updateDate = data.updateDate;
 
-      props.onEdit(id, title, description, finishTaskTill);
+      props.onEdit(id, title, description, finishTaskTill, updateDate);
     }
     reset();
   };
