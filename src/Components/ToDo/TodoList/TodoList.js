@@ -3,6 +3,7 @@ import ToDoItem from "../TodoItem/TodoItem";
 function TodoList(props) {
   let getSortedItems = () => {
     const tasks = props.items.filter((item) => item.isDone === false);
+
     const tasksDone = props.items.filter((item) => item.isDone === true);
     return tasks.concat(tasksDone);
   };
