@@ -15,12 +15,20 @@ function ToDoItem(props) {
       <h2>{title}</h2>
       <p>{description}</p>
       <div>
-        <label htmlFor="is-done">Done:</label>
-        <input type="checkbox" id="is-done" checked={isDone}></input>
+        <label htmlFor="is-Done">Done:</label>
+        <input
+          type="checkbox"
+          id="is-Done"
+          checked={isDone}
+          onChange={(event) => {
+            props.onComplete(id, event.target.checked);
+          }}
+        />
       </div>
 
       <span>Finish until:{timeEnd.toLocaleString()}</span>
       <button onClick={() => props.onDelete(id)}>Delete</button>
+      <button onClick={() => props.onEdit(id)}>Edit</button>
       <span>Hours left: {hourDiff.toFixed(0)}</span>
     </div>
   );

@@ -11,6 +11,7 @@ const insertUpdatedItemIntoArrayByIndex = (array, index, updatedItem) => {
   beforeItem.push(updatedItem);
   const afterItem = array.slice(index + 1);
   const updatedArray = beforeItem.concat(afterItem);
+
   return updatedArray;
 };
 
