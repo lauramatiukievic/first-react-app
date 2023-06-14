@@ -9,7 +9,8 @@ import CaunterPage from "./Pages/CounterPage/Counter";
 import ShoppingPage from "./Pages/ShoppingPage/shoppingPage";
 import CitiesPage from "./Pages/CitiesPage/cities";
 
-import ToDoPage from "./Pages/TO DO LIST/toDoPage.js";
+import ToDoPage from "./Pages/ToDoPage/toDoPage.js";
+import ChuckNorrisPage from "./Pages/ChuckNorrisPage/ChuckNorrisPage";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Route path="/shop" element={<ShoppingPage />} />
         <Route path="/cities" element={<CitiesPage />} />
         <Route path="/todo" element={<ToDoPage />} />
+        <Route path="/app/chucknorrisjoke" element={<ChuckNorrisPage />} />
         <Route path="/studentams" element={<h1>Students Page</h1>} />
         <Route path="/verslui" element={<h1>Verslui Page</h1>} />
         <Route path="/programs" element={<h1>Programos Page</h1>} />

@@ -21,7 +21,6 @@ export default function ToDoFormHook(props) {
       reset({ ...defaultValues });
     } else {
       const defaultValues = {
-        id: uuidv4(),
         time: null,
         title: "",
         description: "",
@@ -35,8 +34,9 @@ export default function ToDoFormHook(props) {
 
   const onSubmit = (data) => {
     if (!props.editData) {
+      const id = uuidv4();
       const time = new Date().toLocaleString();
-      const task = { id: data.id, time, title: data.title, description: data.description, finishTaskTill: data.finishTaskTill, isDone: data.isDone, updateDate: data.updateDate };
+      const task = { id: id, time, title: data.title, description: data.description, finishTaskTill: data.finishTaskTill, isDone: data.isDone, updateDate: data.updateDate };
       props.onCreate(task);
     } else {
       let id = data.id;

@@ -10,8 +10,7 @@ function ToDoPage() {
   const [editTodo, setEditTodo] = useState(null);
 
   let createTask = (task) => {
-    const newItems = [...items, task];
-    setItems(newItems);
+    setItems((items) => [...items, task]);
   };
 
   let editTask = (id, title, description, finishTaskTill, updateDate) => {
@@ -42,8 +41,7 @@ function ToDoPage() {
   };
 
   let deleteTask = (id) => {
-    const deleteItem = deleteFunctions.deleteItemFromArrayById(items, id);
-    setItems(deleteItem);
+    setItems((items) => deleteFunctions.deleteItemFromArrayById(items, id));
   };
   return (
     <Container>
@@ -54,3 +52,5 @@ function ToDoPage() {
   );
 }
 export default ToDoPage;
+
+// 7. Padaryti jog atliktos užduotys būtų atvaizduojamos pabaigoje, o dar neatliktos - pradžioje.

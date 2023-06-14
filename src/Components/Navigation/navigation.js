@@ -50,6 +50,11 @@ function Navigation() {
             To Do
           </NavLink>
         </li>
+        <li className="nav-list">
+          <NavLink to="/app/chucknorrisjoke" className="nav-link">
+            Chuck Norris Joke
+          </NavLink>
+        </li>
       </ul>
     </nav>
   );
