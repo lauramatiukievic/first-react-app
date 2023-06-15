@@ -11,9 +11,9 @@ function AiPage() {
   let getInfo = (event, searchName) => {
     event.preventDefault();
     setName(searchName);
-    getAge();
-    getNationalize();
-    getGender();
+    getAge(searchName);
+    getNationalize(searchName);
+    getGender(searchName);
   };
 
   let getAge = (searchName) => {
@@ -41,12 +41,11 @@ function AiPage() {
         console.log(data.gender);
       });
   };
-  let item = { name, age, nationalize, gender };
 
   return (
     <Container>
       <AiForm onSubmit={getInfo}></AiForm>
-      <AiItem item={item}></AiItem>
+      <AiItem item={{ name, age, nationalize, gender }}></AiItem>
     </Container>
   );
 }

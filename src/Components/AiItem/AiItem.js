@@ -4,13 +4,11 @@ import Container from "../Container/container";
 function AiItem({ item }) {
   let { name, age, nationalize, gender } = item;
 
-  function itemExists() {
-    if (name && age && nationalize && gender ){
-        return true
-    } else {return false}
-  }
+  const itemExists = name && age && nationalize && gender;
+
   return (
-    {itemExists()&& <Container>
+    <Container>
+      {itemExists && (
         <div>
           <p>Name: {name.charAt(0).toUpperCase() + name.slice(1)}</p>
           <p>Age: {age}</p>
@@ -25,8 +23,8 @@ function AiItem({ item }) {
           </ul>
           <p>Gender: {gender.charAt(0).toUpperCase() + gender.slice(1)}</p>
         </div>
-      </Container>}
-   
+      )}
+    </Container>
   );
 }
 
