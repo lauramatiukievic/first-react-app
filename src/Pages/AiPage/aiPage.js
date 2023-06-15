@@ -41,11 +41,12 @@ function AiPage() {
         console.log(data.gender);
       });
   };
+  let item = { name, age, nationalize, gender };
 
   return (
     <Container>
       <AiForm onSubmit={getInfo}></AiForm>
-      <AiItem name={name} age={age} nationalize={nationalize} gender={gender}></AiItem>
+      <AiItem item={item}></AiItem>
     </Container>
   );
 }

@@ -1,7 +1,8 @@
 import React from "react";
 import Container from "../Container/container";
 
-function AiItem({ name, age, nationalize, gender }) {
+function AiItem({ item }) {
+  let { name, age, nationalize, gender } = item;
   return (
     <Container>
       <div>
