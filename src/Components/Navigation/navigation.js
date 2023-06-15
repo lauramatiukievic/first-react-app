@@ -55,6 +55,16 @@ function Navigation() {
             Chuck Norris Joke
           </NavLink>
         </li>
+        <li className="nav-list">
+          <NavLink to="/app/dogbreed" className="nav-link">
+            Dog Breed
+          </NavLink>
+        </li>
+        <li className="nav-list">
+          <NavLink to="/app/aipage" className="nav-link">
+            Ai Page
+          </NavLink>
+        </li>
       </ul>
     </nav>
   );

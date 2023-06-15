@@ -11,6 +11,8 @@ import CitiesPage from "./Pages/CitiesPage/cities";
 
 import ToDoPage from "./Pages/ToDoPage/toDoPage.js";
 import ChuckNorrisPage from "./Pages/ChuckNorrisPage/ChuckNorrisPage";
+import DogBreedPage from "./Pages/DogBreed/dogBreedPage";
+import AiPage from "./Pages/AiPage/aiPage";
 
 function App() {
   return (
@@ -30,6 +32,8 @@ function App() {
         <Route path="/cities" element={<CitiesPage />} />
         <Route path="/todo" element={<ToDoPage />} />
         <Route path="/app/chucknorrisjoke" element={<ChuckNorrisPage />} />
+        <Route path="/app/dogbreed" element={<DogBreedPage />} />
+        <Route path="/app/aipage" element={<AiPage />} />
         <Route path="/studentams" element={<h1>Students Page</h1>} />
         <Route path="/verslui" element={<h1>Verslui Page</h1>} />
         <Route path="/programs" element={<h1>Programos Page</h1>} />

@@ -6,6 +6,15 @@ function ChuckNorrisPage() {
   const [categories, setCategories] = useState([]);
   const [selectedCategories, setSelectedCategories] = useState("");
   const [searchJoke, setSearchJoke] = useState("");
+
+  useEffect(() => {
+    fetch(`https://api.chucknorris.io/jokes/categories`)
+      .then((res) => res.json())
+      .then((categoriesData) => {
+        setCategories(categoriesData);
+        console.log(categoriesData);
+      });
+  }, []);
   useEffect(() => {
     const categoryParam = selectedCategories ? `?category=${selectedCategories}` : "";
     fetch(`https://api.chucknorris.io/jokes/random` + categoryParam)
@@ -14,14 +23,6 @@ function ChuckNorrisPage() {
         setJoke(data.value);
       });
   }, [selectedCategories]);
-
-  useEffect(() => {
-    fetch(`https://api.chucknorris.io/jokes/categories`)
-      .then((res) => res.json())
-      .then((categoriesData) => {
-        setCategories(categoriesData);
-      });
-  }, []);
 
   let getJokeHandler = (event) => {
     event.preventDefault();
