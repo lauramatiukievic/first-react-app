@@ -65,6 +65,11 @@ function Navigation() {
             Ai Page
           </NavLink>
         </li>
+        <li className="nav-list">
+          <NavLink to="/app/catfact" className="nav-link">
+            Cat Fact
+          </NavLink>
+        </li>
       </ul>
     </nav>
   );
