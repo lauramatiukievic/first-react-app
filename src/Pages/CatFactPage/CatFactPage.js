@@ -45,7 +45,6 @@ function CatFactPage() {
   return (
     <Container>
       <div>
-        <label>Select a category</label>
         <select value={selectedBreed} onChange={(e) => handleSelect(e.target.value)}>
           <option value="" disabled>
             Select a breed
